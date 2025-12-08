@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Futuristic Crime Analysis HUD</title>
+
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/css/style.css" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Importmap -->
+    <script type="importmap">
+      {
+        "imports": {
+          "animejs": "./node_modules/animejs/dist/bundles/anime.esm.min.js",
+          "chart.js": "./node_modules/chartjs/auto",
+          "@kurkle/color": "./node_modules/@kurkle/color/dist/color.esm.js",
+          "maplibre-gl": "https://esm.sh/maplibre-gl@5.13.0",
+          "zdog": "https://esm.sh/zdog",
+          "tone.js": "https://esm.sh/tone@15.1.22",
+          "vfx-js": "https://esm.sh/zdog"
+        }
+      }
+    </script>
+
+    <!-- JS Modules -->
+    <script type="module" src="./src/js/animejs.js"></script>
+    <script type="module" src="./src/js/chartjs.js"></script>
+    <script type="module" src="./src/js/maplibre.js"></script>
+    <script type="module" src="./src/js/zdog.js"></script>
+    <script type="module" src="./src/js/tonejs.js"></script>
+
+    <script src="./src/js/bootstrap.js" defer></script>
+  </head>
+
+  <body>
+    <div id="hud" class="hud-grid">
+      <!-- LEFT PANEL -->
+      <div id="left-panel" class="panel">
+        <h4 class="section-title">CRIME ANALYTICS IN USA</h4>
+        <button id="sound_button">COMPUTING</button>
+        <br />
+        <div class="state">
+          <button id="boston" class="place">BOSTON</button>
+          <button id="new_york" class="place">NEW YORK</button>
+          <button id="texas" class="place">TEXAS</button>
+        </div>
+        <div class="d-flex justify-content-center align-items-center text-center p-2">
+          <i class="bi bi-cpu"></i>
+          <i class="bi bi-graph-up"></i>
+          <i class="bi bi-geo-alt"></i>
+          <i class="bi bi-bug"></i>
+        </div>
+        <div id="zdog-target">
+          <canvas class="zdog-canvas"></canvas>
+        </div>
+      </div>
+
+      <!-- CENTER PANEL -->
+      <div id="center-panel" class="panel">
+        <h2 class="section-title">CRIME CHART</h2>
+
+        <!-- Chart -->
+        <canvas id="crimeChart"></canvas>
+
+        <!-- Zdog -->
+      </div>
+
+      <!-- MAP PANEL -->
+      <div class="panel">
+        <h4 class="section-title">CITY MAP</h4>
+        <div id="map" class="map-container"></div>
+      </div>
+
+      <!-- ANIMATIONS PANEL -->
+      <div id="animations-panel" class="panel animation-area">
+        <div id="scanline" class="chargement"></div>
+        <div id="pulse" class="battement"></div>
+        <div id="circle" class="boule"></div>
+        <div id="slide" class="glisse"></div>
+      </div>
+    </div>
+  </body>
+</html>

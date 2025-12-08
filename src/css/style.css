@@ -1,0 +1,116 @@
+body {
+  background: #07111f;
+  color: cyan;
+  font-family: "Orbitron", sans-serif;
+  overflow: hidden;
+}
+
+.hud-grid {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 15% 45% 40%;
+  grid-template-rows: 75% 25%;
+}
+
+.panel {
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  padding: 10px;
+  backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  color: cyan;
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid cyan;
+  box-shadow: 0 0 5px 1px white;
+}
+
+#crimeChart {
+  width: 100%;
+  height: 250px;
+}
+
+.zdog-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+#zdogtarget {
+  width: 100%;
+  height: 250px;
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#animations-panel {
+  grid-column: 1 / 4;
+  position: relative;
+  overflow: hidden;
+  background: #031a33;
+  gap: 30%;
+}
+
+#scanline {
+  width: 100%;
+  height: 4px;
+  background: cyan;
+  opacity: 0.3;
+}
+
+#pulse {
+  width: 100%;
+  height: 4px;
+  background: cyan;
+  opacity: 0.3;
+}
+
+#circle {
+  width: 100%;
+  height: 4px;
+  background: cyan;
+  opacity: 0.3;
+}
+
+#slide {
+  width: 100%;
+  height: 4px;
+  background: cyan;
+  opacity: 0.3;
+}
+
+.scan-square {
+  position: absolute;
+  bottom: 10px;
+  width: 18px;
+  height: 18px;
+  background: rgba(0, 180, 255, 0.3);
+  border: 1px solid rgba(0, 200, 255, 0.5);
+  border-radius: 3px;
+}
+
+button {
+  box-shadow: 0 0 5px 1px white;
+  border-radius: 20%;
+  background-color: #A3CDD6;
+}
+
+button:hover {
+  background-color: #00FFBB;
+  
+}
+
+.state {
+  display: flex;
+}
