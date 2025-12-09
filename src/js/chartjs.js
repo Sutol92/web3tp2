@@ -1,7 +1,6 @@
 import Chart from "https://esm.sh/chart.js/auto";
 import { goToState } from "./maplibre.js";
 
-// ---- CRIME DATABASE ----
 const crimeData = {
   boston: {
     label: "Boston Homocide Rate",
@@ -20,7 +19,6 @@ const crimeData = {
   },
 };
 
-// ---- CREATE CHART ----
 const ctx = document.getElementById("crimeChart");
 
 let chart = new Chart(ctx, {
@@ -43,24 +41,20 @@ let chart = new Chart(ctx, {
   },
 });
 
-// ---- CHANGE STATE FUNCTION ----
 export function updateState(state) {
   const info = crimeData[state];
 
-  // update title
   document.querySelector(".section-title").innerText =
     "CRIME ANALYTICS IN " + state.toUpperCase();
 
-  // update chart
   chart.data.datasets[0].label = info.label;
   chart.data.datasets[0].data = info.data;
   chart.update();
 
-  // move map
   goToState(info.coords);
 }
 
-// ---- BUTTON EVENTS ----
+
 document.querySelector("#boston").addEventListener("click", () => {
   updateState("boston");
 });

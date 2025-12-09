@@ -3,7 +3,7 @@ import Zdog from "https://esm.sh/zdog";
 const illo = new Zdog.Illustration({
   element: ".zdog-canvas",
   resize: true,
-  dragRotate: true // 👈
+  dragRotate: true 
 });
 
 new Zdog.Box({
@@ -12,7 +12,7 @@ new Zdog.Box({
   height: 50,
   depth: 80,
   stroke: false,
-  color: '#27F5EE', // default face color
+  color: '#27F5EE',
   leftFace: '#14E7FF',
   rightFace: '#27DAF5',
   topFace: '#14E7FF',
@@ -20,7 +20,6 @@ new Zdog.Box({
 
 });
 
-// 👇
 function animate() {
   illo.updateRenderGraph();
   requestAnimationFrame(animate);
